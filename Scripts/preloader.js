@@ -6,7 +6,7 @@ window.addEventListener("load", function() {
         preloader.style.display = "none";
         document.getElementById("content").style.display = "block";
       }, 3000);
-    }, 100000);
+    }, 10000);
   });
 
   
