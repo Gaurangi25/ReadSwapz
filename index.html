@@ -25,6 +25,9 @@
             <div class="line"></div>
             <div class="line"></div>
             <div class="line"></div>
+
+            <div class="line"></div>
+
             </div> <!-- Animated page in the center -->
         </div>
         </div>
@@ -34,9 +37,7 @@
 
 <!-- Main Content -->
 <div style="display: none;" id="content">
-    <h1>Welcome to the Page</h1>
-    <p>Your content goes here.</p>
-</div>
+    </div>
 
 <script src="scripts/preloader.js"></script>
 
@@ -98,95 +99,9 @@
     </div>
 </section>
 
-<section class="container" id="rent">
-    <h2>Rent a Book</h2>
-    <form>
-        
-    </form>
-</section>n
-
-<section class="container" id="login">
-    <h2>Login</h2>
-    <form action="#" method="POST" class="login-form">
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit">Login</button>
-        <p class="forgot-password"><a href="#">Forgot Password?</a></p>
-    </form>
-</section>
-
-<section class="container" id="signup">
-    <h2>Create an Account</h2>
-    <form action="#" method="POST" class="signup-form">
-        <div class="form-group">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
-        </div>
-        <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
-        </div>
-        <div class="form-group">
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
-        </div>
-        <button type="submit">Sign Up</button>
-    </form>
-</section>
-
-<section class="container" id="signin" style="display:none;">
-    <h2>Sign In</h2>
-    <form action="#" method="POST" class="signin-form">
-        <div class="form-group">
-            <label for="signin-username">Username</label>
-            <input type="text" id="signin-username" name="username" required>
-        </div>
-        <div class="form-group">
-            <label for="signin-password">Password</label>
-            <input type="password" id="signin-password" name="password" required>
-        </div>
-        <button type="submit">Sign In</button>
-        <p class="forgot-password"><a href="#">Forgot Password?</a></p>
-    </form>
-</section>
-
-
-
 <footer>
     <p>&copy; 2024 ReadSwapz.com | All Rights Reserved</p>
 </footer>
-
-<script>
-    // Toggle between Sign Up and Sign In
-    const signupNav = document.querySelector('nav a:nth-child(1)');
-    const signinNav = document.querySelector('nav a:nth-child(2)');
-    const signupSection = document.getElementById('signup');
-    const signinSection = document.getElementById('signin');
-
-    signupNav.addEventListener('click', function() {
-        signupSection.style.display = 'block';
-        signinSection.style.display = 'none';
-        signupNav.classList.add('active');
-        signinNav.classList.remove('active');
-    });
-
-    signinNav.addEventListener('click', function() {
-        signupSection.style.display = 'none';
-        signinSection.style.display = 'block';
-        signinNav.classList.add('active');
-        signupNav.classList.remove('active');
-    });
-</script>
 
 
 </body>

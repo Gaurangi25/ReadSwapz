@@ -151,21 +151,32 @@ button:hover {
     font-size: 16px;
 }
 
-.google-signup {
+/* Google Sign-In Button */
+.google-signin-button {
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
-    color: #8A6746;
+    color: #333333;
     font-weight: bold;
     padding: 10px;
-    border: 1px solid #8A6746;
+    border: 1px solid #A77E58; /* Muted olive color for border */
     border-radius: 5px;
     cursor: pointer;
-    margin-bottom: 10px;
     transition: background-color 0.3s;
+    text-decoration: none;
     width: 100%;
+    margin-top: 20px;
 }
+
+/* Style for the Google logo image */
+.google-signin-button img {
+    width: 20px;
+    margin-right: 10px;
+    background-color: transparent; /* Ensure the logo has no background */
+    border-radius: 0; /* Remove any border-radius if present */
+}
+
 
 .google-signup img {
     width: 20px;
