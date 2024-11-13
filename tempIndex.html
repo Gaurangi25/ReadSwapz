@@ -1,14 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ReadSwapz - The Book Rental Hub</title>
-    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="styles/preloader.css">
-
 </head>
+
 <body>
 
     <!-- Preloader -->
@@ -36,11 +36,12 @@
         </div>
     </div>
 
-    <!-- Main Content -->
-<div style="display: none;" id="content">
-</div>
 
-<script src="scripts/preloader.js"></script>
+    <!-- Main Content -->
+    <div style="display: none;" id="content">
+    </div>
+
+    <script src="scripts/preloader.js"></script>
 
     <!-- Header -->
     <header>
@@ -50,7 +51,7 @@
 
     <!-- Navigation Bar -->
     <nav>
-        <a href="#home">Home</a>
+        <a href="tempIndex.html">Home</a>
         <a href="#categories">Categories</a>
         <a href="#books">Books</a>
         <a href="#popular">Popular</a>
@@ -76,43 +77,68 @@
     <!-- About Us Section -->
     <section class="container" id="home">
         <h2>About Us</h2>
-        <p>At <strong>ReadSwapz</strong>, we believe in the joy of reading and sharing books. Explore a world of stories and knowledge without the need to buy new books every time. Rent books easily, return them hassle-free, and enjoy seamless access to your favorite reads.</p>
+        <p>At <strong>ReadSwapz</strong>, we believe in the joy of reading and sharing books. Explore a world of stories
+            and knowledge without the need to buy new books every time. Rent books easily, return them hassle-free, and
+            enjoy seamless access to your favorite reads.</p>
     </section>
 
     <!-- Book List Section -->
     <section class="container" id="books">
         <h2>Available Books</h2>
         <div class="book-list">
-            <div class="book">
-                <h3>The Great Gatsby</h3>
-                <p>Author: F. Scott Fitzgerald</p>
-                <p>Genre: Fiction</p>
+
+            <div class="book-card">
+                <div class="book-card-inner">
+                    <div class="book-card-front" style="background-color: #F1C5B8;">
+                        <h3>The Great Gatsby</h3>
+                        <p>Author: F. Scott Fitzgerald</p>
+                        <p>Genre: Fiction</p>
+                    </div>
+                    <div class="book-card-back" style="background-color: #F5F5EB;">
+                        <p>A classic novel about the American dream and the excess of the Jazz Age.</p>
+                    </div>
+                </div>
             </div>
-            <div class="book">
-                <h3>1984</h3>
-                <p>Author: George Orwell</p>
-                <p>Genre: Dystopian</p>
+
+            <div class="book-card">
+                <div class="book-card-inner">
+                    <div class="book-card-front" style="background-color: #F1C5B8;">
+                        <h3>1984</h3>
+                        <p>Author: George Orwell</p>
+                        <p>Genre: Dystopian</p>
+                    </div>
+                    <div class="book-card-back" style="background-color: #F5F5EB;">
+                        <p>A dystopian novel that delves into totalitarianism and surveillance.</p>
+                    </div>
+                </div>
             </div>
-            <div class="book">
-                <h3>To Kill a Mockingbird</h3>
-                <p>Author: Harper Lee</p>
-                <p>Genre: Fiction</p>
+
+            <div class="book-card">
+                <div class="book-card-inner">
+                    <div class="book-card-front" style="background-color: #F1C5B8;">
+                        <h3>To Kill a Mockingbird</h3>
+                        <p>Author: Harper Lee</p>
+                        <p>Genre: Fiction</p>
+                    </div>
+                    <div class="book-card-back" style="background-color: #F5F5EB;">
+                        <p>A profound novel on racial injustice in the American South.</p>
+                    </div>
+                </div>
             </div>
-            <div class="book">
-                <h3>The Alchemist</h3>
-                <p>Author: Paulo Coelho</p>
-                <p>Genre: Fiction</p>
+
+            <div class="book-card">
+                <div class="book-card-inner">
+                    <div class="book-card-front" style="background-color: #F1C5B8;">
+                        <h3>The Alchemist</h3>
+                        <p>Author: Paulo Coelho</p>
+                        <p>Genre: Fiction</p>
+                    </div>
+                    <div class="book-card-back" style="background-color: #F5F5EB;">
+                        <p>An inspiring tale about following one's dreams and destiny.</p>
+                    </div>
+                </div>
             </div>
-            <div class="book">
-                <h3>The Alchemist</h3>
-                <p>Author: Paulo Coelho</p>
-                <p>Genre: Fiction</p>
-            </div>
-            <div class="book">
-                <h3>The Alchemist</h3>
-                <p>Author: Paulo Coelho</p>
-                <p>Genre: Fiction</p>
-            </div>
+
         </div>
     </section>
 
@@ -154,14 +180,8 @@
     <!-- Footer -->
     <footer>
         <p>&copy; 2024 ReadSwapz.com | All Rights Reserved</p>
-        <div class="footer-links">
-            <a href="#home">Home</a>
-            <a href="#categories">Categories</a>
-            <a href="#contact">Contact</a>
-        </div>
     </footer>
 
-
-
 </body>
+
 </html>
