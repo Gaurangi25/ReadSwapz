@@ -1,0 +1,145 @@
+/* General Styles */
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #F5F5EB; /* Soft Cream Background */
+    color: #333333; /* Dark Grey Text */
+}
+
+header {
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF; /* White Text */
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #7AA892; /* Muted Sage Green */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+nav .logo:hover {
+    color: #A77E58; /* Muted Olive Hover Color */
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li {
+    margin: 0 15px;
+}
+
+nav .nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+    background-color: #A77E58; /* Muted Olive */
+    color: #FFFFFF;
+}
+
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.faq-card {
+    margin-bottom: 20px;
+}
+
+.accordion {
+    background-color: #e4b7aa; 
+    color: black;
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    font-size: 1.1em;
+    text-align: left;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion:hover {
+    background-color: #A77E58; /* Muted Olive on hover */
+}
+
+.panel {
+    padding: 0 15px;
+    background-color: #F5F5EB; /* Soft Cream Background */
+    display: none;
+    overflow: hidden;
+    border-left: 4px solid #7AA892; /* Green Left Border */
+    border-radius: 0 0 8px 8px;
+    margin-top: 10px;
+    color: #4A4A4A;
+}
+
+/* Accordion Text Styling */
+.accordion:after {
+    content: '\002B'; /* "+" symbol for closed state */
+    font-size: 1.5em;
+    color: #FFFFFF;
+    float: right;
+}
+
+.accordion.active:after {
+    content: "\2212"; /* "−" symbol for open state */
+}
+
+/* Panel Styling */
+.panel p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Dark Grey */
+    color: #FFFFFF; /* White Text */
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

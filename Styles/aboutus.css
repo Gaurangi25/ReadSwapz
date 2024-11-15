@@ -1,0 +1,143 @@
+/* General Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #F5F5EB; /* Soft Cream Background */
+    color: #333333; /* Dark Grey Text */
+}
+
+header {
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF;
+    padding: 30px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+header p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #7AA892;
+    padding: 15px 0;
+}
+
+nav a {
+    color: #FFFFFF;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+nav a:hover {
+    color: #8A6746;
+    text-decoration: underline;
+}
+
+/* About Us Section */
+.about-us {
+    background-color: #F1C5B8; /* Soft Peach */
+    padding: 40px 20px;
+    margin: 40px 0;
+    border-radius: 8px;
+}
+
+.about-us-content {
+    max-width: 900px;
+    margin: 0 auto;
+    font-size: 1.2em;
+    line-height: 1.8;
+}
+
+/* Mission Section */
+.mission, .vision, .core-values {
+    padding: 40px 20px;
+    background-color: #FFFFFF;
+    max-width: 900px;
+    margin: 40px auto;
+    border-radius: 8px;
+    color: #333333;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.core-values ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.core-values li {
+    font-size: 1.1em;
+    margin: 10px 0;
+}
+
+/* Team Section */
+.team {
+    background-color: #FFFFFF;
+    padding: 40px 20px;
+}
+
+.team h2 {
+    font-size: 2.5em;
+    margin-bottom: 30px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #F5F5EB;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #fff;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 2.5em; /* Font awesome icon size */
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.4em;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.team-member p {
+    font-size: 1em;
+    color: #4A4A4A;
+}
+
+/* Footer */
+footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
