@@ -1,0 +1,119 @@
+/* General Styles */
+body {
+    font-family: cursive;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #F5F5EB; /* Soft Cream Background */
+    color: #333333; /* Dark Grey Text */
+}
+
+header {
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF; /* White Text */
+    padding: 20px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+/* Navigation Bar */
+nav {
+    background-color: #7AA892; /* Dark Grey */
+    padding: 10px 0;
+}
+
+nav a {
+    color: #FFFFFF; /* White Links */
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #8A6746; /* Warm Brown on Hover */
+    text-decoration: underline;
+}
+
+/* FAQ Section */
+.faq-section {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 8px; /* Slightly rounded corners for a soft look */
+}
+
+.faq-card {
+    margin-bottom: 20px;
+}
+
+.accordion {
+    background-color: #F1C5B8; /* Muted Sage Green */
+    color: #black; /* White Text */
+    cursor: pointer;
+    padding: 15px;
+    width: 100%;
+    font-family: cursive;
+
+    text-align: left;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.accordion:hover {
+    background-color: #8A6746; /* Warm Brown */
+}
+
+.panel {
+    padding: 0 15px;
+    background-color: #FFFFFF; /* White Background */
+    display: none;
+    overflow: hidden;
+    border-left: 4px solid #7AA892; /* Left border for styling */
+    border-radius: 0 0 8px 8px;
+    margin-top: 10px;
+    color: #4A4A4A;
+}
+
+/* Accordion Text Styling */
+.accordion {
+    font-weight: bold;
+}
+
+.accordion:after {
+    content: '\002B'; /* "+" symbol for closed state */
+    font-size: 1.5em;
+    color: #FFFFFF;
+    float: right;
+}
+
+.accordion.active:after {
+    content: "\2212"; /* "−" symbol for open state */
+}
+
+/* Panel Styling */
+.panel p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+/* Footer */
+footer {
+    background-color: #333333; /* Dark Grey */
+    color: #FFFFFF; /* White Text */
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
