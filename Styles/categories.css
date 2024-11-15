@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+    font-family: cursive;
+    background-color: #FDFCF7; /* Soft Cream Background */
+    color: #333333; /* Dark Grey/Near Black */
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background-color: #7AA892; /* Muted Sage Green */
+    padding: 30px;
+    text-align: center;
+    color: #FFFFFF; /* White */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #FDFCF7;
+}
+/* Navigation Bar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7AA892; /* Muted Sage Green */
+    padding: 15px 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+nav .logo:hover {
+    background-color: #A77E58; /* Muted Olive */
+    color: #FFFFFF;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li {
+    margin: 0 15px;
+}
+
+nav .nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+    background-color: #A77E58; /* Muted Olive */
+    color: #FFFFFF;
+}
+
+/* Mobile Menu (Hamburger) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #FFFFFF;
+    height: 4px;
+    width: 25px;
+    margin: 4px;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #7AA892;
+        width: 200px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Menu is hidden by default */
+        transition: transform 0.3s ease;
+        box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .nav-links li {
+        margin: 20px 0;
+    }
+
+    nav .nav-links a {
+        padding: 15px 30px;
+    }
+
+    nav .menu-toggle {
+        display: flex; /* Display hamburger icon */
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Display menu when active */
+        transform: translateX(0);
+    }
+}
+
+/* Categories Section */
+.categories-section {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 40px 20px;
+    background-color: #FAF9F4;
+}
+
+.category-card {
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.category-card h3 {
+    font-size: 1.5em;
+    margin: 15px 0;
+    color: #F1C5B8; /* Light Peach Color */
+    font-weight: bold;
+}
+
+.category-card p {
+    font-size: 1em;
+    margin: 10px 0;
+    color: #4A4A4A;
+    line-height: 1.6;
+}
+
+.category-card .button {
+    text-decoration: none;
+    background-color: #e4b7aa; /* Muted Sage Green */
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.category-card .button:hover {
+    background-color: #635129; /* Warm Brown */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    background-color: #7AA892;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+/* JavaScript for Mobile Menu Toggle */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #FFFFFF;
+    height: 4px;
+    width: 25px;
+    margin: 4px;
+    border-radius: 2px;
+}
+
+/* Add margin to the body */
+body {
+    margin-top: 80px; /* To ensure content does not overlap with sticky nav */
+}

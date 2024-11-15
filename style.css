@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: cursive;
     background-color: #FDFCF7;
     /* Soft Cream Background */
     color: #333333;
@@ -104,6 +104,8 @@ nav a.active {
     width: 200px;
     height: 300px;
     perspective: 1000px;
+ 
+
 }
 
 .book-card-inner {
