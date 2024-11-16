@@ -53,6 +53,7 @@
     <!-- Navigation Bar -->
     <nav>
         <a href="tempIndex.html">Home</a>
+        <a href="Pages/aboutus.html">About Us</a>
         <a href="Pages/categories.html">Categories</a>
         <a href="Pages/genres.html">Genres</a>
         <a href="Pages/contact.html">Contact</a>
@@ -64,7 +65,10 @@
 
     <!-- Search Bar and Filter -->
     <section class="search-filter">
-        <input type="text" id="search-bar" placeholder="Search for books...">
+        <div class="search-bar-wrapper">
+            <input type="text" id="search-bar" placeholder="Search for books...">
+            <button onclick="searchBooks()">🔍</button>
+        </div>
         <select id="category-filter">
             <option value="all">All Categories</option>
             <option value="fiction">Fiction</option>
@@ -72,9 +76,8 @@
             <option value="biography">Biography</option>
             <option value="science">Science</option>
         </select>
-        <button onclick="searchBooks()">Search</button>
     </section>
-
+    
     <!-- About Us Section -->
     <section class="container" id="home">
         <h2>About Us</h2>

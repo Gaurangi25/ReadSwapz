@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: cursive;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -17,7 +17,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 3em;
-    font-family: 'Roboto', sans-serif;
+    font-family: cursive;
     font-weight: 700;
 }
 
@@ -46,7 +46,6 @@ nav a:hover {
 
 /* About Us Section */
 .about-us {
-    background-color: #F1C5B8; /* Soft Peach */
     padding: 40px 20px;
     margin: 40px 0;
     border-radius: 8px;

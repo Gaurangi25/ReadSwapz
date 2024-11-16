@@ -172,7 +172,7 @@ nav .nav-links a.active {
 
 .category-card .button {
     text-decoration: none;
-    background-color: #e4b7aa; /* Muted Sage Green */
+    background-color: #e4b7aa; 
     color: black;
     padding: 10px 20px;
     border-radius: 5px;
@@ -181,7 +181,7 @@ nav .nav-links a.active {
 }
 
 .category-card .button:hover {
-    background-color: #635129; /* Warm Brown */
+    background-color: #e4b7aa; /* Warm Brown */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
