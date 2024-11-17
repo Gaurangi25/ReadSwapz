@@ -12,6 +12,17 @@
 
 <body>
     <header>
+        <nav>
+            <a href="../tempIndex.html" class="logo">ReadSwapz</a>
+            <ul class="nav-links">
+                <li><a href="../tempIndex.html">Home</a></li>
+                <li><a href="../Pages/aboutus.html">About Us</a></li>
+                <li><a href="../Pages/contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <header>
         <h1>Help Center</h1>
         <p>Your guide to using ReadSwapz</p>
     </header>
@@ -19,11 +30,8 @@
     <!-- Search Bar -->
     <section class="search-section">
         <input type="text" id="search-bar" placeholder="Search for help topics...">
-        <button id="search-btn">Search</button>
+        <button id="clear-search">Clear</button>
     </section>
-
-    <!-- Back to Top Button -->
-    <button id="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑</button>
 
     <!-- FAQ Section -->
     <section class="faq">
@@ -60,6 +68,11 @@
     <footer>
         <p>&copy; 2024 ReadSwapz. All rights reserved.</p>
     </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" title="Back to Top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
 
     <script src="../Scripts/help.js"></script>
 </body>
