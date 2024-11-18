@@ -1,45 +1,63 @@
 <?php
-session_start();
-
-// Database connection
 $servername = "localhost";
-$username = "root"; // Your database username
-$password = "gaurangi"; // Your database password
-$dbname = "readswapz"; // Your database name
+$username = "root";
+$password = "gaurangi";
+$dbname = "readswapz";
 
-$conn = new mysqli($servername, $username, $password, $dbname);
+$con = mysqli_connect($servername, $username, $password, $dbname);
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+if (mysqli_connect_errno()) 
+{
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+} 
+else 
+{
+    echo "Connection made<br>";
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $username = $_POST['username'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $confirm_password = $_POST['confirm-password'];
 
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // Retrieve form data
+    $name = mysqli_real_escape_string($con, $_POST['name']);
+    $email = mysqli_real_escape_string($con, $_POST['email']);
+    $password = $_POST['password'];
+    $confirm_password = $_POST['confirm_password'];
+
+    // Check if passwords match
     if ($password !== $confirm_password) {
-        header("Location: ../Pages/signup.html?error=Passwords do not match");
-        exit();
+        echo "Passwords do not match.";
     }
 
+    ECHO "HELLO";
+
+    // Hash the password
     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-    // Insert user into the database
-    $sql = "INSERT INTO users (username, email, password) VALUES (?, ?, ?)";
-    $stmt = $conn->prepare($sql);
-    $stmt->bind_param("sss", $username, $email, $hashed_password);
+    // Create the `USER` table if it doesn't exist
+    $table = "CREATE TABLE IF NOT EXISTS USER (
+        NAME VARCHAR(30) NOT NULL,
+        EMAIL VARCHAR(100) NOT NULL UNIQUE,
+        PASSWORD VARCHAR(200) NOT NULL,
+        CREATED_AT TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+    )";
 
-    if ($stmt->execute()) {
-        // Redirect to login page or dashboard after successful signup
-        header("Location: ../Pages/login.html?success=Account created successfully");
+    if (mysqli_query($con, $table)) {
+        echo "Table `USER` is ready.<br>";
     } else {
-        header("Location: ../Pages/signup.html?error=User already exists or error occurred");
+        die("Error creating table: " . mysqli_error($con));
     }
 
-    $stmt->close();
-    $conn->close();
+    // Insert user data into the table
+    $insert = "INSERT INTO USER (NAME, EMAIL, PASSWORD) VALUES ('$name', '$email', '$hashed_password')";
+
+    if (mysqli_query($con, $insert)) {
+        echo "Registration successful!";
+    } else {
+        echo "Error: " . mysqli_error($con);
+    }
 }
-?>
+
+// Close the connection
+mysqli_close($con);
