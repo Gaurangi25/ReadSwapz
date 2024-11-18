@@ -28,20 +28,107 @@ header p {
 
 /* Navigation Bar */
 nav {
-    background-color: #7AA892;
-    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #7AA892; /* Muted Sage Green */
+    padding: 15px 30px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-nav a {
+nav .logo {
+    font-size: 1.8em;
+    font-weight: bold;
     color: #FFFFFF;
-    margin: 0 15px;
     text-decoration: none;
-    font-weight: 500;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-    color: #8A6746;
-    text-decoration: underline;
+nav .logo:hover {
+    background-color: #8A6746; /* Muted Olive */
+    color: #FFFFFF;
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav .nav-links li {
+    margin: 0 15px;
+}
+
+nav .nav-links a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease;
+}
+
+nav .nav-links a:hover,
+nav .nav-links a.active {
+    background-color: #8A6746; /* Muted Olive */
+    color: #FFFFFF;
+}
+
+/* Mobile Menu (Hamburger) */
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.menu-toggle .bar {
+    background-color: #FFFFFF;
+    height: 4px;
+    width: 25px;
+    margin: 4px;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #7AA892;
+        width: 200px;
+        height: 100vh;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        display: none; /* Menu is hidden by default */
+        transition: transform 0.3s ease;
+        box-shadow: -4px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    nav .nav-links li {
+        margin: 20px 0;
+    }
+
+    nav .nav-links a {
+        padding: 15px 30px;
+    }
+
+    nav .menu-toggle {
+        display: flex; /* Display hamburger icon */
+    }
+
+    nav .nav-links.active {
+        display: flex; /* Display menu when active */
+        transform: translateX(0);
+    }
 }
 
 /* About Us Section */
@@ -107,8 +194,8 @@ nav a:hover {
 }
 
 .avatar {
-    background-color: #7AA892; /* Muted Sage Green */
-    color: #fff;
+    background-color: #e4b7aa; /* Muted Sage Green */
+    color: black;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -133,10 +220,30 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #333333;
-    color: #FFFFFF;
+    background-color: #7AA892;
+    color: black;
     padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+/* Footer */
+footer {
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #8A6746; /* Muted Olive */
 }

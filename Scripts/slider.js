@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function () {
         
         let currentIndex = 0;
         const visibleCards = -120; // Number of visible cards (adjust as needed)
-        const moveCards = 3; // Number of cards to move on each click
+        const moveCards = 20; // Number of cards to move on each click
         const cardWidth = bookCards[0].offsetWidth + 20; // Width of each card including margin
         let isAnimating = false;
 
