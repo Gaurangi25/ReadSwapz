@@ -1,8 +1,8 @@
 /* General Styles */
 body {
     font-family: cursive;
-    background-color: #FDFCF7; /* Soft Cream Background */
-    color: #333333; /* Dark Grey/Near Black */
+    background-color: #FDFCF7; 
+    color: #333333; 
     margin: 0;
     padding: 0;
 }
@@ -50,7 +50,7 @@ nav .logo {
 }
 
 nav .logo:hover {
-    background-color: #A77E58; /* Muted Olive */
+    background-color: #8A6746; /* Muted Olive */
     color: #FFFFFF;
 }
 
@@ -77,7 +77,7 @@ nav .nav-links a {
 
 nav .nav-links a:hover,
 nav .nav-links a.active {
-    background-color: #A77E58; /* Muted Olive */
+    background-color: #8A6746; /* Muted Olive */
     color: #FFFFFF;
 }
 
@@ -185,16 +185,6 @@ nav .nav-links a.active {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Footer */
-footer {
-    background-color: #7AA892;
-    color: #FFFFFF;
-    text-align: center;
-    padding: 10px;
-    font-size: 0.9em;
-    font-weight: bold;
-}
-
 /* JavaScript for Mobile Menu Toggle */
 .menu-toggle {
     display: none;
@@ -210,7 +200,23 @@ footer {
     border-radius: 2px;
 }
 
-/* Add margin to the body */
-body {
-    margin-top: 80px; /* To ensure content does not overlap with sticky nav */
+/* Footer */
+footer {
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #A77E58; /* Muted Olive */
 }

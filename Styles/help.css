@@ -26,7 +26,7 @@ nav .logo {
 }
 
 nav .logo:hover {
-    color: #926b47;
+    color: #8A6746;
 }
 
 nav ul.nav-links {
@@ -52,7 +52,7 @@ nav ul.nav-links a {
 
 nav ul.nav-links a:hover,
 nav ul.nav-links a.active {
-    background-color: #926b47;
+    background-color: #8A6746;
     color: #FFFFFF;
 }
 
@@ -163,8 +163,21 @@ button#clear-search:hover {
 
 /* Footer */
 footer {
-    background-color: #333333;
-    color: #FFFFFF;
-    padding: 10px 0;
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF; /* White */
     text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #8A6746; /* Muted Olive */
 }
