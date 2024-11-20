@@ -1,9 +1,6 @@
 <?php
 session_start();
-$servername = "localhost";
-$username = "root";
-$password = "gaurangi";
-$dbname = "readswapz";
+require "config.php";
 
 // Create connection
 $con = mysqli_connect($servername, $username, $password, $dbname);
