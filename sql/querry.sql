@@ -1,25 +1,38 @@
--- Step 4: Fetch Books Owned by a User
--- To fetch all books owned by a specific user, you can perform a join between user_books and books:
 
-SELECT books.title, books.author, books.genre, books.publish_year 
-FROM books
-JOIN user_books ON books.id = user_books.book_id
-WHERE user_books.user_id = 1;  -- Replace 1 with the user_id you want to query
--- This query will return all the books owned by the user with user_id = 1.
+-- Inserting multiple genres
+INSERT INTO genres (name, description) VALUES
+('Fiction', 'Literary works based on imaginative narration.'),
+('Non-Fiction', 'Informative works based on factual information.'),
+('Science Fiction', 'Stories centered on futuristic technology and science.'),
+('Fantasy', 'Literary works with magical or supernatural elements.'),
+('Mystery', 'Works that involve solving crimes or uncovering secrets.'),
+('Romance', 'Stories focused on romantic relationships.'),
+('Thriller', 'Books with high tension and suspenseful plots.'),
+('Horror', 'Stories designed to scare and thrill the reader.'),
+('Biography', 'Accounts of a person’s life written by someone else.'),
+('Autobiography', 'Accounts of a person’s life written by themselves.'),
+('History', 'Books detailing historical events and periods.'),
+('Poetry', 'Works written in verse form to express emotions or ideas.'),
+('Self-Help', 'Books providing advice for personal improvement.'),
+('Philosophy', 'Works exploring fundamental questions about existence.'),
+('Adventure', 'Stories centered around exciting journeys or events.'),
+('Graphic Novels', 'Books told through a combination of art and text.'),
+('Drama', 'Narratives dealing with emotional and relational themes.'),
+('Comedy', 'Works designed to entertain and amuse readers.'),
+('Young Adult', 'Books targeted at teenage audiences with relatable themes.'),
+('Children', 'Stories and books for young readers.');
 
--- Step 5: Fetch All Users Who Own a Specific Book
--- To fetch all users who own a specific book, you can perform a similar query:
 
-SELECT users.name, users.email 
-FROM users
-JOIN user_books ON users.id = user_books.user_id
-WHERE user_books.book_id = 2;  -- Replace 2 with the book_id you want to query
--- This query will return all users who own the book with book_id = 2.
-
--- Step 6: Deleting Books from Users
--- If you want to delete a book from a user's collection, you can simply delete the row in the user_books table:
-
--- sql
--- Copy code
-DELETE FROM user_books WHERE user_id = 1 AND book_id = 2;
---This will remove the association between User 1 and Book 2. The book itself will remain in the books table, but User 1 will no longer own it.
+--Inserting few books in table
+INSERT INTO books (title, author, genre, publication_year, isbn, available_copies)
+VALUES 
+    ('To Kill a Mockingbird', 'Harper Lee', 'Fiction', 1960, '9780061120084', 5),
+    ('1984', 'George Orwell', 'Dystopian', 1949, '9780451524935', 3),
+    ('Pride and Prejudice', 'Jane Austen', 'Romance', 1813, '9781503290563', 4),
+    ('The Great Gatsby', 'F. Scott Fitzgerald', 'Classic', 1925, '9780743273565', 2),
+    ('Moby Dick', 'Herman Melville', 'Adventure', 1851, '9781503280786', 1),
+    ('The Catcher in the Rye', 'J.D. Salinger', 'Fiction', 1951, '9780316769488', 3),
+    ('Harry Potter and the Sorcerer  Stone', 'J.K. Rowling', 'Fantasy', 1997, '9780590353427', 7),
+    ('The Lord of the Rings', 'J.R.R. Tolkien', 'Fantasy', 1954, '9780618640157', 6),
+    ('The Alchemist', 'Paulo Coelho', 'Philosophical', 1988, '9780061122415', 4),
+    ('The Hunger Games', 'Suzanne Collins', 'Science Fiction', 2008, '9780439023481', 5);
