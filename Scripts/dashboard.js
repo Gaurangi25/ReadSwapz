@@ -1,19 +1,21 @@
-// Function to display user information and statistics
-function displayUserInfo() {
-    // Getting elements by their IDs to insert dynamic data
-    const userName = document.getElementById("user-name");
-    const userEmail = document.getElementById("user-email");
-    const booksBorrowed = document.getElementById("books-borrowed");
-    const booksDonated = document.getElementById("books-donated");
-    const booksAvailable = document.getElementById("books-available");
+document.addEventListener('DOMContentLoaded', function() {
+    // Fetch user data from backend
+    fetch('../backend/get_user_data.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.error) {
+                console.error('Error:', data.error);
+            } else {
+                // Populate the profile with the fetched name and email
+                document.getElementById('user-name').textContent = data.name;
+                document.getElementById('user-email').textContent = data.email;
+                document.getElementById('books-borrowed').textContent = data.books_borrowed;
+                document.getElementById('books-donated').textContent = data.books_donated;
+                document.getElementById('books-available').textContent = data.books_available;
+            }
+        })
+        .catch(error => console.error('Error fetching data:', error));
+});
 
-    // Setting the text content dynamically
-    userName.textContent = `Hi, ${user.name}`;
-    userEmail.textContent = `Email: ${user.email}`;
-    booksBorrowed.textContent = `${user.booksBorrowed} / 20`;
-    booksDonated.textContent = `${user.booksDonated} / 20`;
-    booksAvailable.textContent = `${user.booksAvailable} / 20`;
-}
-
-// Call the function on page load
-window.onload = displayUserInfo;
+document.getElementById('user-name').textContent = data.name;
+document.getElementById('user-email').textContent = data.email;
