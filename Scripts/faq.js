@@ -1,21 +1,29 @@
-// Get all accordion buttons
-const accordions = document.querySelectorAll('.accordion');
+// Profile Picture Selection Script
+document.addEventListener("DOMContentLoaded", () => {
+    const avatarOptions = document.querySelectorAll(".avatar-option");
+    const selectedProfilePic = document.getElementById("selected-profile-pic");
+    const saveButton = document.getElementById("save-profile-pic");
 
-// Loop through each accordion button and add a click event listener
-accordions.forEach((accordion) => {
-    accordion.addEventListener('click', function() {
-        // Toggle the active class
-        this.classList.toggle('active');
-        
-        // Get the panel that is next to the clicked accordion
-        const panel = this.nextElementSibling;
-        
-        // If the panel is open, close it
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
+    // Highlight selected avatar
+    avatarOptions.forEach((avatar) => {
+        avatar.addEventListener("click", () => {
+            // Remove 'selected' class from all avatars
+            avatarOptions.forEach((item) => item.classList.remove("selected"));
+            // Add 'selected' class to the clicked avatar
+            avatar.classList.add("selected");
+
+            // Update the main profile picture
+            selectedProfilePic.src = avatar.src;
+        });
+    });
+
+    // Save the profile picture (could be extended to send data to a server)
+    saveButton.addEventListener("click", () => {
+        const selectedAvatar = document.querySelector(".avatar-option.selected");
+        if (selectedAvatar) {
+            alert("Profile picture updated successfully!");
         } else {
-            // Otherwise, open it
-            panel.style.display = "block";
+            alert("Please select a profile picture before saving.");
         }
     });
 });

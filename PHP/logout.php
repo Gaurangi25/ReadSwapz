@@ -1,9 +1,13 @@
 <?php
+// Start the session
 session_start();
 
-// Destroy the session to log out
-session_destroy();
+echo "Hello";
+// Destroy the session
+session_unset();  // Unset all session variables
+session_destroy(); // Destroy the session
 
-header('Location: http://localhost/ReadSwapz/Pages/login.html');
-exit;
+// Redirect to login page
+header("Location: login.php");
+exit();
 ?>

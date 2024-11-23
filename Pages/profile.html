@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="../Styles/profile.css">
+    <link rel="stylesheet" href="../Styles/navbar.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">ReadSwapz</a>
+            <div class="menu-toggle" id="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="../index.html" class="active">Home</a></li>
+                <li><a href="../Pages/login.html">Login</a></li>
+                <li><a href="../Pages/aboutus.html">About</a></li>
+                <li><a href="../Pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <section class="profile-section">
+            <h2>Update Your Profile Picture</h2>
+            <div class="profile-picture">
+                <img id="selected-profile-pic" src="../Assets/Avatars/logo.png" alt="Profile Picture">
+            </div>
+            <div class="profile-pic-options">
+                <h3>Select a Profile Picture:</h3>
+                <div class="custom-dropdown" id="custom-dropdown">
+                    <div class="dropdown-selected">
+                        <img id="dropdown-selected-img" src="../Assets/Avatars/logo.png" alt="Selected Avatar">
+                    </div>
+                    <div class="dropdown-options">
+                        <img src="../Assets/Avatars/1.png" alt="Avatar 1" class="dropdown-option">
+                        <img src="../Assets/Avatars/2.png" alt="Avatar 2" class="dropdown-option">
+                        <img src="../Assets/Avatars/3.png" alt="Avatar 3" class="dropdown-option">
+                        <img src="../Assets/Avatars/4.png" alt="Avatar 4" class="dropdown-option">
+                        <img src="../Assets/Avatars/5.png" alt="Avatar 5" class="dropdown-option">
+                        <img src="../Assets/Avatars/6.png" alt="Avatar 6" class="dropdown-option">
+                        <img src="../Assets/Avatars/7.png" alt="Avatar 7" class="dropdown-option">
+                        <img src="../Assets/Avatars/8.png" alt="Avatar 8" class="dropdown-option">
+                        <img src="../Assets/Avatars/9.png" alt="Avatar 9" class="dropdown-option">
+                        <img src="../Assets/Avatars/10.png" alt="Avatar 10" class="dropdown-option">
+                        <img src="../Assets/Avatars/11.png" alt="Avatar 11" class="dropdown-option">
+                        <img src="../Assets/Avatars/12.png" alt="Avatar 12" class="dropdown-option">
+                        <img src="../Assets/Avatars/13.png" alt="Avatar 13" class="dropdown-option">
+                        <img src="../Assets/Avatars/14.png" alt="Avatar 14" class="dropdown-option">
+                        <img src="../Assets/Avatars/15.png" alt="Avatar 15" class="dropdown-option">
+                    </div>
+                </div>
+            </div>
+            <button id="save-profile-pic" class="btn">Save Picture</button>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 <strong>ReadSwapz</strong>. All Rights Reserved.</p>
+    </footer>
+
+    <script src="../Scripts/profile.js"></script>
+    <script src="../Scripts/menu_toggle.js"></script>
+</body>
+
+</html>
