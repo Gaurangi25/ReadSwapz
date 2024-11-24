@@ -132,7 +132,7 @@ header p {
     background-color: #f9f9f9;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 1.0s ease, box-shadow 0.3s ease;
     text-align: center;
     position: relative;
 }
@@ -183,7 +183,7 @@ header p {
 
 /* Hover effect speed adjustment */
 .book-card:hover {
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 1s ease, box-shadow 0.15s ease;
     /* Faster hover effect */
 }
 

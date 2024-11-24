@@ -7,7 +7,7 @@ async function signupUser() {
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
     const confirmPassword = document.getElementById('confirm_password').value;
-
+     console.log("data saved in variables");
     // Validation
     if (!name || !email || !password || !confirmPassword) {
         alert('All fields are required. Please fill in the form completely.');
@@ -18,16 +18,21 @@ async function signupUser() {
         alert('Passwords do not match. Please try again.');
         return;
     }
+    console.log("password confirmed");
 
 
     try {
         // Send request to the backend
         console.log(`${BACKEND_URL}/user`);
+        console.log("sending request");
+
         const response = await fetch(`${BACKEND_URL}/user`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ name, email, password, confirm_password: confirmPassword }),
         });
+        console.log("request sended");
+
         const result = await response.json();
         console.log(result);
 
@@ -37,7 +42,7 @@ async function signupUser() {
             // Save email to localStorage
             localStorage.setItem('loggedInUser', email);
             // Redirect to the dashboard
-            window.location.href = './../dashboard.html';
+            window.location.href = '../pages/dashboard.html';
         } else {
             // On failure
             alert(result.error || 'An error occurred during signup. Please try again.');
