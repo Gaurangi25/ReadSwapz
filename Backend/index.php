@@ -39,6 +39,9 @@ switch ($uri) {
         require "routes/userRoutes.php"; // Handle user signup/login
         break;
 
+    case '/user/login' :
+        require "routes/loginRoutes.php"; // Handle user signup/login
+        break;
     default:
         // Return 404 for unknown routes
         http_response_code(404);

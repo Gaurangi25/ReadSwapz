@@ -1,13 +1,34 @@
-// Extract logged-in user's email from localStorage
-function checkLogin() {
-    const loggedInUser = localStorage.getItem('loggedInUser'); // Retrieve the data
+const BACKEND_URL = "http://localhost/READSWAPZ/Backend/index.php"; // Replace with your backend URL
 
-    if (loggedInUser) {
-        // User is logged in, display their email
-        document.getElementById('welcome-message').textContent = `Welcome back, ${loggedInUser}!`;
-    } else {
-        // No user is logged in, redirect to login or show a message
-        document.getElementById('welcome-message').textContent = 'You are not logged in.';
+async function LoginUser() {
+    const loggedInUser = localStorage.getItem('loggedInUser'); // Retrieve the data
+    
+    const email = document.getElementById('email').value.trim();
+    const password = document.getElementById('password').value;
+
+    try {
+        // Send request to the backend
+        console.log(`${BACKEND_URL}/user`);
+        const response = await fetch(`${BACKEND_URL}/user/login`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password }),
+        });
+        const result = await response.json();
+        console.log(result);
+
+        if (response.ok) {
+            alert(result.success || 'Account logged in successfully!');
+            localStorage.setItem('loggedInUser', email);
+            window.location.replace('./Pages/dashboard.html');
+        } else {
+            // On failure
+            alert(result.error || 'An error occurred during login. Please try again.');
+        }
+    } catch (error) {
+        // Handle network or server errors
+        console.error('login Error:', error);
+        alert('Failed to connect to the server. Please try again later.');
     }
 }
 
@@ -19,4 +40,7 @@ function logout() {
 }
 
 // Call the function to check login status on page load
-checkLogin();
+document.getElementById('loginForm').addEventListener('submit', async function (event) {
+    event.preventDefault(); 
+    await LoginUser();
+});
