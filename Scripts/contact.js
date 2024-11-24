@@ -10,6 +10,8 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     if (!name || !email || !message) {
         statusMessage.textContent = "Please fill out all fields.";
         statusMessage.style.color = "red";
+        statusMessage.style.fontWeight = "bold"; // Make text bold
+        statusMessage.style.opacity = "0.8"; // Slightly darken the text
         return;
     }
 
@@ -18,12 +20,16 @@ document.getElementById("contact-form").addEventListener("submit", function (eve
     if (!emailPattern.test(email)) {
         statusMessage.textContent = "Please enter a valid email address.";
         statusMessage.style.color = "red";
+        statusMessage.style.fontWeight = "bold"; // Make text bold
+        statusMessage.style.opacity = "0.8"; // Slightly darken the text
         return;
     }
 
     // Display success message after form submission
     statusMessage.textContent = "Thank you for reaching out. We will get back to you soon!";
-    statusMessage.style.color = "#7AA892";
+    statusMessage.style.color = "#000000";
+    statusMessage.style.fontWeight = "bold"; // Make text bold
+    statusMessage.style.opacity = "0.9"; // Slightly darken the text
     
     // Reset form (optional)
     document.getElementById("contact-form").reset();

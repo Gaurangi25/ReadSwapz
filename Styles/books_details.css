@@ -139,3 +139,54 @@
 .book12 {
     background-image: url('../Assets/Books/malgudi days.jpg');
 }
+
+
+/*Popular Books*/
+.booka{
+    background-image: url('../Assets/Popular/Mockingbird.jpg');
+}
+
+.bookb{
+    background-image: url('../Assets/Popular/rye.jpg');
+}
+
+.bookc{
+    background-image: url('../Assets/Popular/lordofRings.jpg');
+}
+
+.bookd{
+    background-image: url('../Assets/Popular/hungerimage.jpg');
+}
+
+.booke{
+    background-image: url('../Assets/Popular/da.jpg');
+}
+
+.bookf{
+    background-image: url('../Assets/Popular/clear.jpg');
+}
+
+.bookg{
+    background-image: url('../Assets/Popular/seven.jpg');
+}
+
+.bookh{
+    background-image: url('../Assets/Popular/sixthsense.jpg');
+}
+
+.booki{
+    background-image: url('../Assets/Popular/timemachine.jpg');
+}
+
+.bookj{
+    background-image: url('../Assets/Popular/predestination.jpg');
+}
+
+.bookk{
+    background-image: url('../Assets/Popular/psycho.jpg');
+}
+
+.bookl{
+    background-image: url('../Assets/Popular/happiness.jpg');
+}
+

@@ -51,28 +51,25 @@ body {
 }
 
 button {
-    background-color: #7AA892;
-    /* Muted Sage Green */
-    color: white;
-    padding: 12px 25px;
-    font-size: 1.2em;
+    background-color: #e4b7aa;
+    color: black;
+    padding: 8px 15px;
+    font-size: 1.6em;
     border: none;
+    font-family: cursive;
     cursor: pointer;
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #6c8f74;
-    /* Darker Sage */
+    background-color: #cd8e7d;
 }
 
 /* Footer */
 footer {
     background-color: #7AA892;
-    /* Muted Sage Green */
     color: #FFFFFF;
-    /* White */
     text-align: center;
     padding: 15px 20px;
     font-size: 0.9em;
@@ -81,13 +78,11 @@ footer {
 
 footer a {
     color: #FFFFFF;
-    /* White */
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #A77E58;
-    /* Muted Olive */
+    color: #8A6746;
 }

@@ -1,6 +1,6 @@
 /* Logout Page Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: cursive;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #7AA892; /* Muted Sage Green */
+    background-color: #7AA892; 
     color: white;
     padding: 20px;
     text-align: center;
@@ -24,10 +24,11 @@ header {
 }
 
 button {
-    background-color: #7AA892; /* Muted Sage Green */
-    color: white;
+    background-color: #e4b7aa; /* Muted Sage Green */
+    color: black;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-family: cursive;
+    font-size: 1.5em;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -36,12 +37,13 @@ button {
 }
 
 button:hover {
-    background-color: #6c8f74; /* Darker Sage */
+    background-color: #cd8e7d; /* Darker Sage */
 }
+
 /* Footer */
 footer {
-    background-color: #7AA892; /* Muted Sage Green */
-    color: #FFFFFF; /* White */
+    background-color: #7AA892; 
+    color: #FFFFFF; 
     text-align: center;
     padding: 15px 20px;
     font-size: 0.9em;
@@ -49,12 +51,12 @@ footer {
 }
 
 footer a {
-    color: #FFFFFF; /* White */
+    color: #FFFFFF; 
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #A77E58; /* Muted Olive */
+    color: #A77E58; 
 }
