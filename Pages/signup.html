@@ -32,7 +32,7 @@
         <div class="signup-box">
             <h2>Sign Up</h2>
             <!-- Update the form action to point to signup.php correctly -->
-            <form id="signupForm" method="POST" >
+            <form id="signupForm" action="dashboard.html" >
                 <div class="input-field">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
@@ -78,17 +78,6 @@
         </p>
     </footer>
 
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        const signupForm = document.getElementById("signupForm");
-        if (signupForm) {
-            signupForm.action = `${BACKEND_URL}signup.php`;
-        }
-    });
-    </script>
-    <script src="../Scripts/signup.js"></script>
-    <script src="../CONFIG.JS"></script>
-    <script src="../Scripts/menu_toggle.js"></script>
-    
+    <script type="module" src="../Scripts/signup.js"></script>
 </body>
 </html>

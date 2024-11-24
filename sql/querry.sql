@@ -1,9 +1,9 @@
+USE  ReadSwapz;
 
 -- Inserting multiple genres
-INSERT INTO genres (name, description) VALUES
+
+INSERT IGNORE INTO genres (name, description) VALUES
 ('Fiction', 'Literary works based on imaginative narration.'),
-('Non-Fiction', 'Informative works based on factual information.'),
-('Science Fiction', 'Stories centered on futuristic technology and science.'),
 ('Fantasy', 'Literary works with magical or supernatural elements.'),
 ('Mystery', 'Works that involve solving crimes or uncovering secrets.'),
 ('Romance', 'Stories focused on romantic relationships.'),
@@ -23,7 +23,7 @@ INSERT INTO genres (name, description) VALUES
 ('Children', 'Stories and books for young readers.');
 
 
---Inserting few books in table
+-- Inserting few books in table
 INSERT INTO books (title, author, genre, publication_year, isbn, available_copies)
 VALUES 
     ('To Kill a Mockingbird', 'Harper Lee', 'Fiction', 1960, '9780061120084', 5),

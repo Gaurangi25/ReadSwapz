@@ -1,14 +1,16 @@
-CREATE DATABASE A;
-USE A;
+CREATE DATABASE ReadSwapz;
+USE ReadSwapz;
 
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL,
     email VARCHAR(150) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
+    image BLOB ,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Create the `books` table
 CREATE TABLE books (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -25,13 +27,14 @@ CREATE TABLE user_books (
     book_id INT,
     FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE,
     FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE,
-    PRIMARY KEY (user_id, book_id)  
-    );
+    PRIMARY KEY (user_id, book_id)  -- Composite primary key to ensure uniqueness of user-book pair
+);
 
+-- Create the `rent` table with renter and lender
 CREATE TABLE rent (
     id INT AUTO_INCREMENT PRIMARY KEY,
-    renter_id INT NOT NULL, 
-    lender_id INT NOT NULL, 
+    renter_id INT NOT NULL, -- User who rents the book
+    lender_id INT NOT NULL, -- User who owns the book
     book_id INT NOT NULL,
     rent_date DATE NOT NULL,
     due_date DATE NOT NULL,
@@ -42,12 +45,14 @@ CREATE TABLE rent (
     FOREIGN KEY (book_id) REFERENCES books(id) ON DELETE CASCADE
 );
 
+-- Create the `genres` table (optional, for genre management)
 CREATE TABLE genres (
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100) NOT NULL UNIQUE,
     description TEXT
 );
 
+-- Create the `book_genres` table (many-to-many relationship between books and genres)
 CREATE TABLE book_genres (
     book_id INT NOT NULL,
     genre_id INT NOT NULL,
@@ -56,6 +61,7 @@ CREATE TABLE book_genres (
     FOREIGN KEY (genre_id) REFERENCES genres(id) ON DELETE CASCADE
 );
 
+-- Create the `reviews` table (optional, for user reviews on books)
 CREATE TABLE reviews (
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
