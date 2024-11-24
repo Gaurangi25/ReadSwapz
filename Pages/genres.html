@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="stylesheet" href="../styles/genres.css">
     <link rel="stylesheet" href="../Styles/navbar.css">
-
 </head>
 
 <body>
@@ -40,35 +39,35 @@
     <!-- Categories Section -->
     <main>
         <section class="categories" id="categories">
-            <article class="category-card" role="button" tabindex="0">
+            <article class="category-card" role="button" tabindex="0" onclick="goToFiction()">
                 <h2>Fiction</h2>
                 <p>Immerse yourself in imaginary worlds and thrilling adventures.</p>
             </article>
-            <article class="category-card" role="button" tabindex="0">
+            <article class="category-card" role="button" tabindex="0" onclick="goToFiction()">
                 <h2>Non-Fiction</h2>
                 <p>Discover books filled with real-world insights and knowledge.</p>
             </article>
-            <article class="category-card" role="button" tabindex="0">
+            <article class="category-card" role="button" tabindex="0" onclick="goToFiction()">
                 <h2>Biography</h2>
                 <p>Read about the lives and achievements of inspiring individuals.</p>
             </article>
-            <article class="category-card" role="button" tabindex="0">
+            <article class="category-card" role="button" tabindex="0" onclick="goToFiction()">
                 <h2>Science</h2>
                 <p>Unravel the mysteries of the universe with scientific literature.</p>
             </article>
-            <article class="category-card" role="button" tabindex="0">
+            <article class="category-card" role="button" tabindex="0" onclick="goToFiction()">
                 <h2>Fantasy</h2>
                 <p>Dive into magical realms with wizards, dragons, and mythical tales.</p>
             </article>
-            <article class="category-card" role="button" tabindex="0">
+            <article class="category-card" role="button" tabindex="0" onclick="goToFiction()">
                 <h2>Romance</h2>
                 <p>Feel the warmth of love and relationships in these stories.</p>
             </article>
-            <article class="category-card" role="button" tabindex="0">
+            <article class="category-card" role="button" tabindex="0" onclick="goToFiction()">
                 <h2>Mystery</h2>
                 <p>Solve gripping cases and uncover secrets with thrilling mysteries.</p>
             </article>
-            <article class="category-card" role="button" tabindex="0">
+            <article class="category-card" role="button" tabindex="0" onclick="goToFiction()">
                 <h2>Classics</h2>
                 <p>Rediscover timeless works that have shaped literature.</p>
             </article>
@@ -88,6 +87,12 @@
     <script src="../scripts/genres.js"></script>
     <script src="../scripts/menu_toggle.js"></script>
 
+    <!-- JavaScript to handle the category click -->
+    <script>
+        function goToFiction() {
+            window.location.href = "fiction.html"; // Redirect to fiction.html
+        }
+    </script>
 
 </body>
 
