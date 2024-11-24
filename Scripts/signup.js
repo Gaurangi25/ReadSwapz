@@ -42,7 +42,7 @@ async function signupUser() {
             // Save email to localStorage
             localStorage.setItem('loggedInUser', email);
             // Redirect to the dashboard
-            window.location.href = './../dashboard.html';
+            window.location.href = '../pages/dashboard.html';
         } else {
             // On failure
             alert(result.error || 'An error occurred during signup. Please try again.');

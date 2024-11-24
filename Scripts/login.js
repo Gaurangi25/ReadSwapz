@@ -20,7 +20,7 @@ async function LoginUser() {
         if (response.ok) {
             alert(result.success || 'Account logged in successfully!');
             localStorage.setItem('loggedInUser', email);
-            window.location.replace('./Pages/dashboard.html');
+            window.location.replace('../pages/dashboard.html');
         } else {
             // On failure
             alert(result.error || 'An error occurred during login. Please try again.');
