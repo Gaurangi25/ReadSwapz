@@ -8,7 +8,7 @@ body {
 }
 
 .header-container {
-    background: linear-gradient(90deg, #388f65, #4aac76, #3c9e67, #1a7449, #2b8064, #5bba8c);
+    background: linear-gradient(90deg, #7AA892, #66a87d, #7b9e8e, #5f8e6c, #7AA892);
     background-size: 800% 800%; /* Larger size for ultra-smooth transitions */
     color: #FFFFFF;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
