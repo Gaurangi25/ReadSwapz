@@ -1,0 +1,144 @@
+
+/* Header */
+header {
+    background-color: #7AA892; /* Muted Sage Green */
+    padding: 30px;
+    text-align: center;
+    color: #FFFFFF; /* White */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2em;
+    color: #FDFCF7;
+}
+
+
+
+#books h2 {
+    text-align: left;
+    color: #333333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+/* Footer */
+footer {
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #804f22; /* Muted Olive */
+}
+
+.book1 {
+    background-image: url('../Assets/Books/TheGreatGatsby.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book2 {
+    background-image: url('../Assets/Books/Harry Potter1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book3 {
+    background-image: url('../Assets/Popular/rye.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book4 {
+    background-image: url('../Assets/Popular/Mockingbird.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book5 {
+    background-image: url('../Assets/Books/1984.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book6 {
+    background-image: url('../Assets/Books/hobbit image.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book7 {
+    background-image: url('../Assets/Books/brave.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book8 {
+    background-image: url('../Assets/Books/doorian.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book9 {
+    background-image: url('../Assets/Books/shining.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book10 {
+    background-image: url('../Assets/Popular/lordofRings.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book11 {
+    background-image: url('../Assets/Books/fahrenheit.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book12 {
+    background-image: url('../Assets/Books/animal.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book13 {
+    background-image: url('../Assets/Books/handmaid.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book14 {
+    background-image: url('../Assets/Books/hunger.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.book15 {
+    background-image: url('../Assets/Books/garden.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
