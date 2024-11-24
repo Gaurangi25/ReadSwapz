@@ -52,3 +52,34 @@ class UserController {
     }
     
 }
+
+?>
+
+<?php
+session_start(); // Start the session to access session variables
+include('db_connection.php'); // Include the database connection
+
+// Check if the user is logged in
+if (isset($_SESSION['user_id'])) {
+    $user_id = $_SESSION['user_id']; // Get the logged-in user's ID
+
+    // Query to fetch user data
+    $sql = "SELECT name, email, books_borrowed, books_donated, books_available FROM users WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->bind_param("i", $user_id); // Bind user ID to the query
+    $stmt->execute();
+    $result = $stmt->get_result();
+
+    // Check if user exists
+    if ($result->num_rows > 0) {
+        $user_data = $result->fetch_assoc(); // Fetch the user data
+        echo json_encode($user_data); // Return user data as JSON
+    } else {
+        echo json_encode(['error' => 'User not found']);
+    }
+} else {
+    echo json_encode(['error' => 'User not logged in']);
+}
+
+$conn->close(); // Close the database connection
+?>
