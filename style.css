@@ -7,22 +7,63 @@ body {
     padding: 0;
 }
 
-/* Header */
-header {
-    background-color: #7AA892;
-    padding: 20px;
-    text-align: center;
+.header-container {
+    background: linear-gradient(90deg, #388f65, #4aac76, #3c9e67, #1a7449, #2b8064, #5bba8c);
+    background-size: 800% 800%; /* Larger size for ultra-smooth transitions */
     color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: subtleGradientAnimation 15s linear infinite; /* Slower and seamless */
 }
 
-header h1 {
+/* Define the animation for the gradient */
+@keyframes subtleGradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 25% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    75% {
+        background-position: 75% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Header Content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.logo-container {
+    margin-right: 40px;
+}
+
+.logo {
+    width: 300px; 
+    height: auto;
+    margin-bottom: -70px;
+    margin-right: -300px;
+    
+}
+
+.header-content h1 {
     margin: 0;
     font-size: 2.6em;
     line-height: 1.2;
-
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-header p {
+.header-content p {
     margin: 10px 0 0;
     font-size: 1.2em;
 }
@@ -32,34 +73,27 @@ header p {
     top: 10px;
     right: 10px;
     width: 40px;
-    /* Adjust size as needed */
     height: 40px;
-    /* Adjust size as needed */
     border-radius: 50%;
-    /* To make it circular if it's a square image */
     cursor: pointer;
 }
-
 
 /* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #7AA892;
+    gap: 15px;
     padding: 10px 0;
-    box-shadow: 0px 4px 6px rgba(49, 4, 4, 0.1);
 }
 
 nav a {
     color: #FFFFFF;
     padding: 10px 20px;
     text-decoration: none;
-    text-align: center;
     font-size: 1em;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
     border-radius: 20px;
-    margin: 0 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
@@ -69,7 +103,21 @@ nav a:hover {
 
 nav a.active {
     background-color: #A77E58;
-    border: 2px solid #A77E58;
+}
+
+/* Responsive Design for Header */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
 }
 
 /* Search Bar Section */

@@ -113,6 +113,28 @@ header p {
     color: #4A4A4A;
 }
 
+/* Header Container with Gradient */
+.header-container {
+    background: linear-gradient(90deg, #65b68f, #2b684b);
+    background-size: 400% 400%; /* Make the gradient larger for smooth animation */
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: gradientAnimation 10s ease infinite; /* Add animation */
+}
+
+/* Define the animation for the gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* Footer */
 footer {
     background-color: #7AA892;
