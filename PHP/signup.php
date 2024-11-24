@@ -3,7 +3,6 @@ session_start();
 
 require "config.php";
 
-
 // Database connection
 $con = mysqli_connect($servername, $username, $password, $dbname);
 
@@ -48,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if user already exists
     $check_user = "SELECT * FROM USER WHERE EMAIL = '$email'";
     $result = mysqli_query($con, $check_user);
-    
+
     if (mysqli_num_rows($result) > 0) {
         echo "<script>alert('An account with this email already exists.');</script>";
         exit;
@@ -61,8 +60,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $_SESSION['name'] = $name;
         $_SESSION['email'] = $email;
 
-        // Redirect to dashboard
-        header('Location: http://localhost/ReadSwapz/PHP/dashboard.php');
+        // Redirect to the new location
+        echo "<html>
+        <head>
+            <meta http-equiv='refresh' content='0;url=/ReadSwapz/Pages/dashboard.html'>
+        </head>
+        <body>
+        </body>
+        </html>";
         exit;
     } else {
         echo "<script>alert('Error: " . mysqli_error($con) . "');</script>";
@@ -71,4 +76,3 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 // Close the connection
 mysqli_close($con);
-?>

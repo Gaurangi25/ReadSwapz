@@ -1,12 +1,3 @@
-// Dummy data for the user (this can be dynamically fetched from an API or stored data)
-const user = {
-    name: "Gaurangi Agarwal",
-    email: "gaurangi250704@gamil.com",
-    booksBorrowed: 5,
-    booksDonated: 3,
-    booksAvailable: 12
-};
-
 // Function to display user information and statistics
 function displayUserInfo() {
     // Getting elements by their IDs to insert dynamic data
@@ -19,9 +10,9 @@ function displayUserInfo() {
     // Setting the text content dynamically
     userName.textContent = `Hi, ${user.name}`;
     userEmail.textContent = `Email: ${user.email}`;
-    booksBorrowed.textContent = `Books Borrowed: ${user.booksBorrowed}`;
-    booksDonated.textContent = `Books Donated: ${user.booksDonated}`;
-    booksAvailable.textContent = `Books Available: ${user.booksAvailable}`;
+    booksBorrowed.textContent = `${user.booksBorrowed} / 20`;
+    booksDonated.textContent = `${user.booksDonated} / 20`;
+    booksAvailable.textContent = `${user.booksAvailable} / 20`;
 }
 
 // Call the function on page load

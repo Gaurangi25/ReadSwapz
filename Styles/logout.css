@@ -17,23 +17,6 @@ header {
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
-
 .logout-content {
     flex-grow: 1; /* Allows content to take up the remaining space */
     padding: 20px;

@@ -27,6 +27,17 @@ header p {
     font-size: 1.2em;
 }
 
+.profile-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    border-radius: 50%; /* To make it circular if it's a square image */
+    cursor: pointer;
+}
+
+
 /* Navigation Bar */
 nav {
     display: flex;
