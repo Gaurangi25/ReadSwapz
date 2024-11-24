@@ -35,7 +35,7 @@ header p {
 
 .category-card {
     background-color: #FFFFFF;
-    border: 2px solid #7AA892;
+    border: 2px solid #e4b7aa;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -50,7 +50,7 @@ header p {
 
 .category-card h2 {
     margin: 0;
-    color: #7AA892;
+    color: #e4b7aa;
 }
 
 .category-card p {

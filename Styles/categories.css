@@ -77,7 +77,7 @@ header p {
 }
 
 .category-card .button:hover {
-    background-color: #e4b7aa;
+    background-color: #cd8e7d;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -114,5 +114,5 @@ footer a {
 }
 
 footer a:hover {
-    color: #A77E58; 
+    color: #8A6746; 
 }

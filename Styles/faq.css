@@ -53,7 +53,7 @@ header p {
 }
 
 .accordion:hover {
-    background-color: #a57a52; /* Muted Olive on hover */
+    background-color: #cd8e7d; /* Muted Olive on hover */
 }
 
 .panel {
@@ -104,5 +104,5 @@ footer a {
 }
 
 footer a:hover {
-    color: #A77E58; /* Muted Olive */
+    color: #804f22; /* Muted Olive */
 }

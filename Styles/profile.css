@@ -201,7 +201,7 @@ header .logo {
 
 /* Button */
 .btn {
-    background-color: #F1C5B8; 
+    background-color: #e4b4a5; 
     color: #000000;
     border: none;
     border-radius: 5px;
@@ -213,5 +213,27 @@ header .logo {
 }
 
 .btn:hover {
-    background-color: #e4b4a5; 
+    background-color: #cd8e7d; 
 }
+
+/* Footer */
+footer {
+    background-color: #7AA892; 
+    color: #FFFFFF; 
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FFFFFF; 
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #A77E58; 
+}
+

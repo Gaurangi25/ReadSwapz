@@ -1,5 +1,5 @@
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: cursive;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -76,17 +76,18 @@ header .logo {
 
 .edit-profile-btn {
     padding: 8px 20px;
-    background-color: #7AA892;
-    color: white;
+    background-color: #e4b7aa;
+    color: black;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 14px;
+    font-family: cursive;
     transition: background-color 0.3s;
 }
 
 .edit-profile-btn:hover {
-    background-color: #4A7362;
+    background-color: #cd8e7d;
 }
 
 .stats-section {
@@ -121,7 +122,7 @@ header .logo {
 
 .quick-links h3 {
     font-size: 20px;
-    color: #7AA892;
+    color: black;
     margin-bottom: 20px;
 }
 
@@ -138,8 +139,8 @@ header .logo {
 
 .quick-links ul li a {
     padding: 10px 20px;
-    background-color: #7AA892;
-    color: white;
+    background-color: #e4b7aa;
+    color: black;
     border-radius: 5px;
     text-decoration: none;
     font-size: 14px;
@@ -147,38 +148,26 @@ header .logo {
 }
 
 .quick-links ul li a:hover {
-    background-color: #4A7362;
+    background-color: #cd8e7d;
 }
 
+/* Footer */
 footer {
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF; /* White */
     text-align: center;
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    margin-top: 40px;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
 }
 
-footer p {
-    margin: 0;
-    font-size: 14px;
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
 }
 
-@media screen and (max-width: 768px) {
-    .stats-section {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .stat-item {
-        width: 80%;
-        margin-bottom: 20px;
-    }
-
-    .quick-links ul {
-        text-align: center;
-    }
-
-    .quick-links ul li {
-        display: block;
-    }
+footer a:hover {
+    color: #804f22; /* Muted Olive */
 }

@@ -62,13 +62,13 @@
 }
 
 #available-books .book-card-back {
-    background-color: #7AA892;
+    background-color: #cd8e7d;
     color: #fff;
     transform: rotateY(180deg);
 }
 
 #available-books .slider-btn {
-    background-color: #7AA892;
+    background-color: #cd8e7d;
     border: none;
     color: white;
     cursor: pointer;
@@ -79,7 +79,7 @@
 }
 
 #available-books .slider-btn:hover {
-    background-color: #24893a;
+    background-color: #c6755f;
 }
 
 #available-books .slide-left {
@@ -154,13 +154,13 @@
 }
 
 #popular .book-card-back {
-    background-color: #7AA892;
+    background-color: #cd8e7d;
     color: #fff;
     transform: rotateY(180deg);
 }
 
 #popular .slider-btn {
-    background-color: #7AA892;
+    background-color: #cd8e7d;
     border: none;
     color: white;
     cursor: pointer;
@@ -171,7 +171,7 @@
 }
 
 #popular .slider-btn:hover {
-    background-color: #24893a;
+    background-color: #c6755f;
 }
 
 #popular .slide-left {
