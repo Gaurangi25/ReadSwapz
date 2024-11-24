@@ -29,6 +29,7 @@ async function signupUser() {
             body: JSON.stringify({ name, email, password, confirm_password: confirmPassword }),
         });
         const result = await response.json();
+        console.log(result);
 
         if (response.ok) {
             // On success
