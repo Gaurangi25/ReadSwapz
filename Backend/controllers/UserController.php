@@ -5,8 +5,9 @@ require_once __DIR__ . '/../models/user.php';
 class UserController {
     private $userModel;
 
-    public function __construct($dbConnection) {
-        $this->userModel = new User($dbConnection);
+    public function __construct($con) {
+        $this->userModel = new User($con);
+
     }
 
     public function signup($postData) {
@@ -20,38 +21,30 @@ class UserController {
             return "All fields are required!";
         }
 
-        if ($password !== $confirmPassword) {
-            return "Passwords do not match.";
-        }
-
         // Hash password
         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
-        // Ensure the table exists
-        if (!$this->userModel->createTable()) {
-            return "Failed to create the USER table.";
-        }
-
+        
         // Check if the user exists
-        if ($this->userModel->findByEmail($email)) {
+        $res=$this->userModel->findByEmail($email);
+        if (mysqli_num_rows($res)> 0) {
+            echo ($count);
+            mysqli_free_result($res);
             return "An account with this email already exists.";
         }
 
         // Save the user
         if ($this->userModel->save($name, $email, $hashedPassword)) {
-            $_SESSION['name'] = $name;
-            $_SESSION['email'] = $email;
-            header("Location: /dashboard.php");
-            exit;
+            return "Account created successfully.";
         } else {
             return "An error occurred while creating your account.";
         }
     }
 
-    public function getUser($id) {
-        $query = "SELECT id, name, email FROM users WHERE id = ?";
+    public function getUser($email) {
+        $query = "SELECT id, name, email FROM users WHERE email = ?";
         $stmt = $this->userModel->conn->prepare($query);
-        $stmt->bind_param("i", $id);
+        $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
     
