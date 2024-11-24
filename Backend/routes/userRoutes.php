@@ -1,14 +1,5 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "READSWAPZ";
-$con = mysqli_connect($servername, $username, $password, $dbname);
-
-if (!$con) {
-    die("Database connection failed: " . mysqli_connect_error());
-}
 
 header("Content-Type: application/json");
 
