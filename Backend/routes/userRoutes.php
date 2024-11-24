@@ -60,10 +60,12 @@ switch ($method) {
                 if ($borrowedResult && $borrowedResult->num_rows > 0) {
                     while ($row = $borrowedResult->fetch_assoc()) {
                         $borrowedBooks[] = $row;
+                        $borrowedCount ++;
                     }
-                    $borrowedCount = count($borrowedBooks);
-                    $user['borrowedCount'] = $borrowedCount;
+                    //$borrowedCount = count($borrowedBooks);
+                    
                 }
+                $user['borrowedCount'] = $borrowedCount;
     
                 // Fetch donated books
                 $donatedResult = $con->query($donatedQuery);
@@ -74,9 +76,10 @@ switch ($method) {
                         $donatedBooks[] = $row;
                     }
                     $donatedCount = count($donatedBooks);
-                    $user['donatedCount'] = $donatedCount;
                 }
-    
+                
+                $user['donatedCount'] = $donatedCount;
+
                 // Combine the data into a single response
                 $response = [
                     "user" => $user,

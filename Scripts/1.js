@@ -9,4 +9,7 @@ window.addEventListener("load", function() {
   }, 1);
 });
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> b8160863a50b6054e091360ab417c7a5aa8ade11
