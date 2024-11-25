@@ -36,19 +36,17 @@ switch ($method) {
 
     case 'GET': // Fetch user data
         $userEmail = ($_GET['email']); 
-
         if (isset($_GET['email'])) {
             $userEmail = ($_GET['email']); 
             //$userEmail='a@a.com';
             $userQuery = "SELECT id, name , email FROM users WHERE email = '$userEmail'";
     
-            $borrowedQuery = "SELECT * FROM find_rented_books($userEmail);";
-            $donatedQuery = "SELECT * FROM find_lended_books($userEmail);";
+            $borrowedQuery = "CALL find_rented_books('$userEmail');";
+            $donatedQuery = "CALL find_lended_books('$userEmail');";
             
             $userResult = mysqli_query($con, $userQuery);
-
+            
             $count=mysqli_num_rows($userResult) ;
-
             if ($count > 0) {
 
                 $user =mysqli_fetch_assoc($userResult);
@@ -60,9 +58,9 @@ switch ($method) {
                 if ($borrowedResult && $borrowedResult->num_rows > 0) {
                     while ($row = $borrowedResult->fetch_assoc()) {
                         $borrowedBooks[] = $row;
-                        $borrowedCount ++;
+                        $borrowedCount++;
                     }
-                    //$borrowedCount = count($borrowedBooks);
+                    $borrowedCount = count($borrowedBooks);
                     
                 }
                 $user['borrowedCount'] = $borrowedCount;
@@ -70,10 +68,11 @@ switch ($method) {
                 // Fetch donated books
                 $donatedResult = $con->query($donatedQuery);
                 $donatedBooks = [];
-                $donatedCount=0;
+                $donatedCount = 0;
                 if ($donatedResult && $donatedResult->num_rows > 0) {
                     while ($row = $donatedResult->fetch_assoc()) {
                         $donatedBooks[] = $row;
+                        $donatedCount++;
                     }
                     $donatedCount = count($donatedBooks);
                 }
