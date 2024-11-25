@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books Borrowed - ReadSwapz</title>
+    <link rel="stylesheet" href="../Styles/dashboard.css">
+    <link rel="stylesheet" href="../Styles/navbar.css">
+    <style>
+        .borrowed-books-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .borrowed-books-container h1 {
+            text-align: center;
+            font-size: 2em;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .book-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .book-item {
+            background-color: #f9f9f9;
+            margin-bottom: 15px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .book-item h3 {
+            margin: 0;
+            color: #555;
+        }
+
+        .book-item p {
+            margin: 5px 0;
+            color: #777;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo">ReadSwapz</a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Pages/login.html">Login</a></li>
+                <li><a href="../Pages/faq.html">About</a></li>
+                <li><a href="../Pages/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="borrowed-books-container">
+        <h1>Books Borrowed</h1>
+        <ul class="book-list">
+            <li class="book-item">
+                <h3>Book Title 1</h3>
+                <p><strong>Author:</strong> John Doe</p>
+                <p><strong>Borrowed On:</strong> November 1, 2024</p>
+                <p><strong>Due Date:</strong> November 15, 2024</p>
+            </li>
+            <li class="book-item">
+                <h3>Book Title 2</h3>
+                <p><strong>Author:</strong> Jane Smith</p>
+                <p><strong>Borrowed On:</strong> October 25, 2024</p>
+                <p><strong>Due Date:</strong> November 10, 2024</p>
+            </li>
+            <li class="book-item">
+                <h3>Book Title 3</h3>
+                <p><strong>Author:</strong> Alex Brown</p>
+                <p><strong>Borrowed On:</strong> November 5, 2024</p>
+                <p><strong>Due Date:</strong> November 20, 2024</p>
+            </li>
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 <strong>ReadSwapz</strong>. All Rights Reserved.</p>
+        <p>Follow us on:
+            <a href="#" aria-label="Visit us on Facebook">Facebook</a> |
+            <a href="#" aria-label="Visit us on Twitter">Twitter</a> |
+            <a href="#" aria-label="Visit us on Instagram">Instagram</a>
+        </p>
+    </footer>
+</body>
+
+</html>
