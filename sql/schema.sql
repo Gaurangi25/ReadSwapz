@@ -74,5 +74,3 @@ CREATE TABLE reviews (
 );
 
 
-
-
