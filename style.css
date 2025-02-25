@@ -2,74 +2,171 @@
 body {
     font-family: cursive;
     background-color: #FDFCF7;
-    /* Soft Cream Background */
     color: #333333;
-    /* Dark Grey/Near Black */
     margin: 0;
     padding: 0;
 }
 
-/* Header */
-header {
-    background-color: #7AA892;
-    /* Muted Sage Green */
-    padding: 20px;
-    text-align: center;
+.header-container {
+    background: linear-gradient(90deg, #7AA892, #66a87d, #7b9e8e, #5f8e6c, #7AA892);
+    background-size: 800% 800%; /* Larger size for ultra-smooth transitions */
     color: #FFFFFF;
-    /* White */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: subtleGradientAnimation 15s linear infinite; /* Slower and seamless */
 }
 
-header h1 {
+/* Define the animation for the gradient */
+@keyframes subtleGradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    25% {
+        background-position: 25% 50%;
+    }
+    50% {
+        background-position: 50% 50%;
+    }
+    75% {
+        background-position: 75% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Header Content */
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.logo-container {
+    margin-right: 40px;
+}
+
+.logo {
+    width: 300px; 
+    height: auto;
+    margin-bottom: -70px;
+    margin-right: -300px;
+    
+}
+
+.header-content h1 {
     margin: 0;
-    font-size: 2.2em;
+    font-size: 2.6em;
+    line-height: 1.2;
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
-header p {
+.header-content p {
     margin: 10px 0 0;
     font-size: 1.2em;
+}
+
+.profile-icon {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
 /* Navigation Bar */
 nav {
     display: flex;
     justify-content: center;
-    background-color: #7AA892;
-    /* Muted Sage Green */
+    gap: 15px;
     padding: 10px 0;
-    box-shadow: 0px 4px 6px rgba(49, 4, 4, 0.1);
 }
 
 nav a {
     color: #FFFFFF;
-    /* White */
     padding: 10px 20px;
     text-decoration: none;
-    text-align: center;
     font-size: 1em;
     font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
     border-radius: 20px;
-    margin: 0 10px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
     background-color: #8A6746;
-    /* Warm Brown */
     color: #FFFFFF;
-    /* Soft Cream */
 }
 
 nav a.active {
     background-color: #A77E58;
-    /* Muted Olive */
-    border: 2px solid #A77E58;
-    /* Muted Olive */
 }
 
+/* Responsive Design for Header */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2em;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        margin: 5px 0;
+    }
+}
+
+/* Search Bar Section */
+.search-filter {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.search-bar-wrapper {
+    display: flex;
+    align-items: center;
+}
+
+#search-bar {
+    padding: 10px;
+    font-size: 1em;
+    border: 2px solid #e4b7aa;
+    border-radius: 8px;
+    outline: none;
+}
+
+button {
+    background-color: #e4b7aa;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-left: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #e4b7aa;
+}
+
+/* Category Dropdown */
+#category-filter {
+    padding: 10px;
+    border: 2px solid #e4b7aa;
+    border-radius: 8px;
+    font-size: 1em;
+}
 
 /* About Us Section */
 #home h2 {
-    text-align: left;
+    text-align: center;
     color: #333333;
     /* Dark Grey */
     font-size: 2em;
@@ -83,81 +180,72 @@ nav a.active {
     line-height: 1.6;
 }
 
-
-
-/* Book List Section */
-#books h2 {
-    text-align: left;
+#available-books h1 {
+    text-align: center;
     color: #333333;
-    /* Dark Grey */
     font-size: 2em;
     margin-bottom: 20px;
 }
 
-.book-list {
+#popular h2 {
+    text-align: center;
+    color: #333333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#reviews h2 {
+    text-align: center;
+    color: #333333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#faqs h2 {
+    text-align: center;
+    color: #333333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+#contact h2 {
+    text-align: center;
+    color: #333333;
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+
+.review-slider {
     display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+    overflow-x: auto;
 }
 
-.book-card {
-    width: 200px;
-    height: 300px;
-    perspective: 1000px;
- 
-
-}
-
-.book-card-inner {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform s;
-    transform-style: preserve-3d;
-}
-
-.book-card:hover .book-card-inner {
-    transform: rotateY(180deg);
-}
-
-.book-card-front,
-.book-card-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+.review {
+    margin-right: 20px;
+    background-color: #f9f9f9;
     border-radius: 8px;
-    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
 }
 
-.book-card-front {
-    background-color: #f8f9fa;
+.reviewer-img img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
 }
 
-.book-card-back {
-    background-color: #f1f1f1;
-    transform: rotateY(180deg);
+.rating span {
+    color: gold;
 }
 
-.book-card h3 {
-    font-size: 18px;
-    margin: 0 0 10px;
-}
-
-.book-card p {
-    font-size: 14px;
-    margin: 0;
-}
 
 
 /* Button styling */
 button {
-    background-color: #7AA892;
+    background-color: #e4b7aa;
     color: #FFFFFF;
     padding: 10px 20px;
     font-weight: 500;
@@ -169,14 +257,115 @@ button {
 }
 
 button:hover {
-    background-color: #635129;
+    background-color: #cd8e7d;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Preloader animation */
+#preloader {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    /* Adjust fade duration */
+}
+
+#preloader.fade-out {
+    opacity: 0;
+}
+
+/* Optional: Initially hide content until the preloader is removed */
+#content {
+    display: none;
+}
+
+/* Contact Section Styling */
+#contact {
+    padding: 30px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 8px;
+}
+
+.contact-item p {
+    font-size: 1em;
+    margin: 5px 0;
+}
+
+.contact-form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-form button {
+    padding: 12px;
+    background-color: #e4b7aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.contact-form button:hover {
+    background-color: #d49d8b;
 }
 
 
 
-/* Media Queries for Responsive Design */
-@media (max-width: 600px) {
+/* Footer */
+footer {
+    background-color: #7AA892;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #A77E58;
+}
+
+
+
+
+/* General Media Queries for Responsive Design */
+
+/* Small Devices (Tablets and Larger Smartphones) */
+@media (max-width: 768px) {
     nav {
         flex-direction: column;
     }
@@ -187,20 +376,73 @@ button:hover {
     }
 
     .book-list {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .search-filter {
+        flex-direction: column;
+    }
+
+    .book-card {
+        width: 150px;
+        height: 250px;
     }
 }
 
+/* Very Small Devices (Small Smartphones) */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8em;
+    }
 
-/* Footer */
-footer {
-    background-color: #7AA892;
-    /* Muted Sage Green */
-    color: #FFFFFF;
-    /* White */
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    text-align: center;
-    padding: 3px 0;
-    bottom: 0;
-    width: 100%;
+    header p {
+        font-size: 1em;
+    }
+
+    nav a {
+        font-size: 0.9em;
+        padding: 8px 15px;
+    }
+
+    .book-card {
+        width: 120px;
+        height: 200px;
+    }
+
+    .search-filter {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    #search-bar,
+    #category-filter,
+    button {
+        width: 100%;
+    }
+
+    button {
+        padding: 8px;
+    }
+}
+
+/* Large Devices (Desktops) */
+@media (min-width: 1024px) {
+    .book-list {
+        gap: 30px;
+    }
+
+    .book-card {
+        width: 220px;
+        height: 320px;
+    }
+
+    nav a {
+        font-size: 1.1em;
+    }
+
+    button {
+        padding: 12px 25px;
+        font-size: 1.1em;
+    }
 }

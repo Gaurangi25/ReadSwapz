@@ -1,20 +1,21 @@
-// Get all accordion buttons
-const acc = document.getElementsByClassName("accordion");
+// FAQ Toggle Script
+document.addEventListener("DOMContentLoaded", () => {
+    const accordionButtons = document.querySelectorAll(".accordion");
 
-// Loop through each accordion button
-for (let i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function () {
-        // Toggle the panel visibility
-        this.classList.toggle("active");
+    accordionButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+            // Toggle the active state for the accordion
+            button.classList.toggle("active");
 
-        // Get the next sibling element (panel)
-        const panel = this.nextElementSibling;
+            // Get the associated panel
+            const panel = button.nextElementSibling;
 
-        // Toggle panel visibility
-        if (panel.style.display === "block") {
-            panel.style.display = "none";
-        } else {
-            panel.style.display = "block";
-        }
+            // Smooth toggle of panel visibility
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
     });
-}
+});

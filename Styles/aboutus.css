@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: cursive;
     margin: 0;
     padding: 0;
     text-align: center;
@@ -17,7 +17,7 @@ header {
 header h1 {
     margin: 0;
     font-size: 3em;
-    font-family: 'Roboto', sans-serif;
+    font-family: cursive;
     font-weight: 700;
 }
 
@@ -26,27 +26,8 @@ header p {
     font-size: 1.2em;
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #7AA892;
-    padding: 15px 0;
-}
-
-nav a {
-    color: #FFFFFF;
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #8A6746;
-    text-decoration: underline;
-}
-
 /* About Us Section */
 .about-us {
-    background-color: #F1C5B8; /* Soft Peach */
     padding: 40px 20px;
     margin: 40px 0;
     border-radius: 8px;
@@ -108,8 +89,8 @@ nav a:hover {
 }
 
 .avatar {
-    background-color: #7AA892; /* Muted Sage Green */
-    color: #fff;
+    background-color: #e4b7aa; 
+    color: black;
     border-radius: 50%;
     width: 100px;
     height: 100px;
@@ -132,12 +113,54 @@ nav a:hover {
     color: #4A4A4A;
 }
 
+/* Header Container with Gradient */
+.header-container {
+    background: linear-gradient(90deg, #65b68f, #2b684b);
+    background-size: 400% 400%; /* Make the gradient larger for smooth animation */
+    color: #FFFFFF;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    animation: gradientAnimation 10s ease infinite; /* Add animation */
+}
+
+/* Define the animation for the gradient */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* Footer */
 footer {
-    background-color: #333333;
-    color: #FFFFFF;
+    background-color: #7AA892;
+    color: black;
     padding: 10px 0;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+/* Footer */
+footer {
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #8A6746; /* Muted Olive */
 }

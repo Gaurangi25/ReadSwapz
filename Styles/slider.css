@@ -1,0 +1,183 @@
+/* Slider Section for Available Books */
+#available-books .slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+    height: 350px; 
+}
+
+#available-books .slider-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+#available-books .slider-track {
+    display: flex;
+    gap: 40px;
+    transition: transform 0.1 ease;
+    padding: 15px 0;
+}
+
+#available-books .book-card {
+    flex: 0 0 220px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    box-sizing: border-box; 
+}
+
+/* Card rotation on hover */
+#available-books .book-card-inner {
+    position: relative;
+    width: 100%;
+    height: 300px; 
+    transform: rotateY(0deg);
+    transition: transform 0.5s;
+}
+
+#available-books .book-card:hover .book-card-inner {
+    transform: rotateY(180deg);
+}
+
+#available-books .book-card-front,
+.book-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+#available-books .book-card-front {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+#available-books .book-card-back {
+    background-color: #cd8e7d;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+#available-books .slider-btn {
+    background-color: #cd8e7d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+#available-books .slider-btn:hover {
+    background-color: #c6755f;
+}
+
+#available-books .slide-left {
+    left: 10px;
+}
+
+#available-books .slide-right {
+    right: 10px;
+}
+
+/* Slider Styles for Popular Books */
+#popular .slider {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 20px 0;
+    height: 350px; 
+}
+
+#popular .slider-container {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+}
+
+#popular .slider-track {
+    display: flex;
+    gap: 40px;
+    transition: transform 0.5s ease;
+    padding: 15px 0;
+}
+
+#popular .book-card {
+    flex: 0 0 220px;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    box-sizing: border-box; 
+}
+
+/* Card rotation on hover */
+#popular .book-card-inner {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    transform: rotateY(0deg);
+    transition: transform 0.5s;
+}
+
+#popular .book-card:hover .book-card-inner {
+    transform: rotateY(180deg);
+}
+
+#popular .book-card-front,
+.book-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    text-align: center;
+}
+
+#popular .book-card-front {
+    background-color: #f4f4f4;
+    border: 1px solid #ddd;
+}
+
+#popular .book-card-back {
+    background-color: #cd8e7d;
+    color: #fff;
+    transform: rotateY(180deg);
+}
+
+#popular .slider-btn {
+    background-color: #cd8e7d;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 1.5em;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+}
+
+#popular .slider-btn:hover {
+    background-color: #c6755f;
+}
+
+#popular .slide-left {
+    left: 10px;
+}
+
+#popular .slide-right {
+    right: 10px;
+}

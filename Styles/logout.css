@@ -1,6 +1,6 @@
 /* Logout Page Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: cursive;
     margin: 0;
     padding: 0;
     background-color: #f4f4f9;
@@ -11,27 +11,10 @@ body {
 }
 
 header {
-    background-color: #7AA892; /* Muted Sage Green */
+    background-color: #7AA892; 
     color: white;
     padding: 20px;
     text-align: center;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline;
-    margin-right: 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
 }
 
 .logout-content {
@@ -41,10 +24,11 @@ nav ul li a {
 }
 
 button {
-    background-color: #7AA892; /* Muted Sage Green */
-    color: white;
+    background-color: #e4b7aa; /* Muted Sage Green */
+    color: black;
     padding: 10px 20px;
-    font-size: 1.2em;
+    font-family: cursive;
+    font-size: 1.5em;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -53,18 +37,26 @@ button {
 }
 
 button:hover {
-    background-color: #6c8f74; /* Darker Sage */
+    background-color: #cd8e7d; /* Darker Sage */
 }
 
+/* Footer */
 footer {
-    background-color: #7AA892;
-    padding: 10px;
+    background-color: #7AA892; 
+    color: #FFFFFF; 
     text-align: center;
-    margin-top: auto; /* Moves footer to the bottom */
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
 }
 
 footer a {
+    color: #FFFFFF; 
     text-decoration: none;
-    color: inherit;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #A77E58; 
 }

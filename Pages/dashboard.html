@@ -1,57 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard - ReadSwapz</title>
+    <link rel="stylesheet" href="/READSWAPZ/Styles/dashboard.css">
     <link rel="stylesheet" href="../Styles/dashboard.css">
+    <link rel="stylesheet" href="../Styles/navbar.css">
+
 </head>
+
 <body>
+
+
     <header>
+        <!-- Navbar -->
         <nav>
-            <h1>
-                <a href="../tempIndex.html" style="text-decoration: none; color: inherit; cursor: pointer;">
-                    ReadSwapz
-                </a>
-            </h1>
-            
-            <ul>
-                <li><a href="../tempIndex.html">Home</a></li>
-                <li><a href="../Pages/aboutus.html">About us</a></li>
-                <li><a href="../Pages/contact.html">Contact us</a></li>
-                <li><a href="../Pages/help.html">Help</a></li>
-                <li><a href="../Pages/logout.html">Logout</a></li>
+            <a href="../index.html" class="logo">ReadSwapz</a>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../Pages/login.html">Login</a></li>
+                <li><a href="../Pages/faq.html">About</a></li>
+                <li><a href="../Pages/contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <div class="container">
-        <div class="dashboard-box">
-            <h2>Welcome to your Dashboard</h2>
-            <div class="user-info">
-                <h3 id="user-name">Hi, [User's Name]</h3>
-                <p id="user-email">Email: [User's Email]</p>
-            </div>
+    <div class="dashboard-container">
+        <div class="profile-section">
+            <img src="../Assets/Avatars/11.png" alt="Profile Picture" class="profile-pic">
+            <h2 id="user-name"></h2>
+            <p id="user-email"></p>
+            <a href="../Pages/profile.html">
+                <button class="edit-profile-btn">Edit Profile</button>
+            </a>
+        </div>
 
-            <div class="actions">
-                <h3>Actions:</h3>
-                <ul>
-                    <li><a href="my-books.html">My Books</a></li>
-                    <li><a href="borrow-books.html">Borrow Books</a></li>
-                    <li><a href="donate-books.html">Donate Books</a></li>
-                    <li><a href="profile.html">Profile</a></li>
-                </ul>
+        <div class="stats-section">
+            <div class="stat-item">
+                <a href="borrowed_books.html" class="stat-link">
+                    <h3>Books Borrowed</h3>
+                    <p id="Borrowed"></p>
+                </a>
             </div>
+            <div class="stat-item">
+                <a href="donated_books.html" class="stat-link">
+                    <h3>Books Donated</h3>
+                    <p id="Donated"></p>
+                </a>
+            </div>
+            <div class="stat-item">
+                <a href="fiction.html" class="stat-link">
+                    <h3>Books Available</h3>
+                    <p>15</p>
+                </a>
+            </div>
+        </div>
 
-            <div class="stats">
-                <h3>Statistics:</h3>
-                <p id="books-borrowed">Books Borrowed: 0</p>
-                <p id="books-donated">Books Donated: 0</p>
-                <p id="books-available">Books Available: 0</p>
-            </div>
+
+        <div class="quick-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="fiction.html">My Books</a></li>
+                <li><a href="fiction.html">Borrow Books</a></li>
+                <li><a href="fiction.html">Donate Books</a></li>
+            </ul>
         </div>
     </div>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 <strong>ReadSwapz</strong>. All Rights Reserved.</p>
+        <p>Follow us on:
+            <a href="#" aria-label="Visit us on Facebook">Facebook</a> |
+            <a href="#" aria-label="Visit us on Twitter">Twitter</a> |
+            <a href="#" aria-label="Visit us on Instagram">Instagram</a>
+        </p>
+    </footer>
+
+    <script src="../Scripts/profile.js"></script>
+    <script src="../Scripts/menu_toggle.js"></script>
     <script src="../Scripts/dashboard.js"></script>
 </body>
+
 </html>

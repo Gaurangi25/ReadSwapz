@@ -4,74 +4,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReadSwapz - FAQs</title>
+    <title>ReadSwapz - Categories</title>
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="../styles/faq.css">
+    <link rel="stylesheet" href="../styles/categories.css">
+    <link rel="stylesheet" href="../Styles/navbar.css">
+
 </head>
 
 <body>
 
     <!-- Header -->
     <header>
-        <h1>Frequently Asked Questions</h1>
-        <p>Your questions answered! Learn more about renting, buying, and donating books at ReadSwapz.</p>
+        <h1>Browse Our Categories</h1>
+        <p>Find books to rent, buy, or donate based on your interests!</p>
     </header>
 
-    <!-- Navigation Bar -->
+    <!-- Navbar -->
     <nav>
-        <a href="../tempIndex.html">Home</a>
-        <a href="../Pages/login.html">Login</a>
-        <a href="../Pages/signup.html">Sign Up</a>
-        <a href="../Pages/categories.html">Categories</a>
-        <a href="../Pages/contact.html">Contact Us</a>
-        <a href="../Pages/faq.html">FAQs</a>
+        <a href="../index.html" class="logo">ReadSwapz</a>
+        <div class="menu-toggle">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../Pages/login.html">Login</a></li>
+            <li><a href="../Pages/aboutus.html">About</a></li>
+            <li><a href="../Pages/contact.html">Contact</a></li>
+        </ul>
     </nav>
 
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="faq-card">
-            <button class="accordion">How do I rent a book?</button>
-            <div class="panel">
-                <p>You can rent a book by browsing our categories, selecting your preferred book, and clicking the "Rent" button on the book page. The rental period is adjustable based on your preference.</p>
-            </div>
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="category-card">
+            <h3>Rent Books</h3>
+            <p>Browse through a wide variety of books available for rent. Find the perfect read for your next adventure!
+            </p>
+            <br>
+            <a href="../Pages/fiction.html" class="button">Explore Rentals</a>
         </div>
 
-        <div class="faq-card">
-            <button class="accordion">How do I donate books?</button>
-            <div class="panel">
-                <p>To donate books, simply navigate to our donation section and fill out the donation form with the details of the books you wish to donate. We’ll take care of the rest!</p>
-            </div>
+        <div class="category-card">
+            <h3>Buy Books</h3>
+            <p>Purchase your favorite books and add them to your personal library. We have a great selection to choose
+                from!</p>
+            <br>
+
+            <a href="fiction.html" class="button">Browse Books</a>
         </div>
 
-        <div class="faq-card">
-            <button class="accordion">What are the payment options available?</button>
-            <div class="panel">
-                <p>We accept credit/debit cards, net banking, and PayPal for all transactions. You can choose your preferred payment method during checkout.</p>
-            </div>
-        </div>
-
-        <div class="faq-card">
-            <button class="accordion">Is there a return policy for rented books?</button>
-            <div class="panel">
-                <p>Yes! You can return the rented books anytime before the end of the rental period. We offer free returns within the first 7 days of the rental.</p>
-            </div>
-        </div>
-
-        <div class="faq-card">
-            <button class="accordion">Can I buy books on ReadSwapz?</button>
-            <div class="panel">
-                <p>Yes, we have a wide range of books available for purchase. Simply browse through the categories, select a book, and click "Buy" to complete the purchase process.</p>
-            </div>
+        <div class="category-card">
+            <h3>Donate Books</h3>
+            <p>Make a difference by donating books to those in need. Help us spread knowledge and literacy!</p>
+            <br>
+            <a href="fiction.html" class="button">Start Donating</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 ReadSwapz.com | All Rights Reserved</p>
+        <p>&copy; 2024 <strong>ReadSwapz</strong>. All Rights Reserved.</p>
+        <p>Follow us on:
+            <a href="#" aria-label="Visit us on Facebook">Facebook</a> |
+            <a href="#" aria-label="Visit us on Twitter">Twitter</a> |
+            <a href="#" aria-label="Visit us on Instagram">Instagram</a>
+        </p>
     </footer>
 
-    <script src="../scripts/faq.js"></script>
-
+    <script src="../scripts/menu_toggle.js"></script>
 </body>
 
 </html>

@@ -24,30 +24,14 @@ header p {
     font-size: 1.2em;
 }
 
-/* Navigation Bar */
-nav {
-    background-color: #7AA892; /* Dark Grey */
-    padding: 10px 0;
-}
-
-nav a {
-    color: #FFFFFF; /* White Links */
-    margin: 0 15px;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-nav a:hover {
-    color: #8A6746; /* Warm Brown on Hover */
-    text-decoration: underline;
-}
-
 /* FAQ Section */
 .faq-section {
-    max-width: 1000px;
+    max-width: 800px;
     margin: 40px auto;
     padding: 20px;
-    border-radius: 8px; /* Slightly rounded corners for a soft look */
+    background-color: #FFFFFF;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
 }
 
 .faq-card {
@@ -55,41 +39,35 @@ nav a:hover {
 }
 
 .accordion {
-    background-color: #F1C5B8; /* Muted Sage Green */
-    color: #000000; /* White Text */
+    background-color: #e4b7aa; 
+    color: black;
     cursor: pointer;
     padding: 15px;
     width: 100%;
-    font-family: cursive;
-
+    font-size: 1.1em;
     text-align: left;
     border: none;
     outline: none;
-    font-size: 1.1em;
     border-radius: 8px;
     transition: background-color 0.3s ease;
 }
 
 .accordion:hover {
-    background-color: #8A6746; /* Warm Brown */
+    background-color: #cd8e7d; /* Muted Olive on hover */
 }
 
 .panel {
     padding: 0 15px;
-    background-color: #FFFFFF; /* White Background */
+    background-color: #F5F5EB; /* Soft Cream Background */
     display: none;
     overflow: hidden;
-    border-left: 4px solid #7AA892; /* Left border for styling */
+    border-left: 4px solid #7AA892; /* Green Left Border */
     border-radius: 0 0 8px 8px;
     margin-top: 10px;
     color: #4A4A4A;
 }
 
 /* Accordion Text Styling */
-.accordion {
-    font-weight: bold;
-}
-
 .accordion:after {
     content: '\002B'; /* "+" symbol for closed state */
     font-size: 1.5em;
@@ -110,10 +88,21 @@ nav a:hover {
 
 /* Footer */
 footer {
-    background-color: #333333; /* Dark Grey */
-    color: #FFFFFF; /* White Text */
-    padding: 10px 0;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+    background-color: #7AA892; /* Muted Sage Green */
+    color: #FFFFFF; /* White */
+    text-align: center;
+    padding: 15px 20px;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #FFFFFF; /* White */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #804f22; /* Muted Olive */
 }
